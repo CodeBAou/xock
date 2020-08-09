@@ -1,0 +1,48 @@
+---------------------------------------------------------------
+		DOCUMENTACION
+---------------------------------------------------------------
+Esta libreria consta de 2 metodos principales para la conexion entre cliente y servidor:
+
+	- Metodo1: Peticiones AJAX basado en promesas.
+	- Metodo2: Petciones WEBSOCKET 
+
+	methods GET POST DELETE PUT
+
+	- GET(data).then().catch();
+	- POST(data).then().catch();
+	- PUT(data).then().catch();
+	- DELETE(data).then().catch();
+	
+	method(data).then(
+		(res)=>
+		{
+			//response!
+		}
+	).catch(
+		(err)=>
+		{
+			// error!
+		}
+	);
+
+
+-----------------------------------------------------------------
+			DATA  
+-----------------------------------------------------------------
+	data=
+	{
+		url:"http://localhost:3900/articles/1",    -------[REQUIRED]
+		asyc:true,								   -------[REQUIRED]
+		header:["Content-type","application/x-www-form-urlencoded"], -----[OPTIONAL]
+		body: 														------[OPTIONAL]					
+			['json',{user:'user03483',pass:'abc123.'}],  
+					
+			||  o
+					  
+			['form-data',OBJECTformData],
+		
+		resolve: [ json | text (por defecto) | xml ]    ---------- [OPTIONAL]
+	   
+	}
+		
+*/
